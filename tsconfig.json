@@ -18,9 +18,27 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "incremental": true,
+    "baseUrl": "./src/",
+    "paths": {
+      "@/components/*": [
+        "components/*"
+      ],
+      "@/ui/*": [
+        "components/ui/*"
+      ],
+      "@/pages/*": [
+        "pages/*"
+      ]
+    }
   },
   "include": [
-    "src"
+    "react-app-env.d",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
   ]
 }

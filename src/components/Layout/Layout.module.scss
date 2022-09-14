@@ -1,0 +1,19 @@
+$navbar-width: 12%;
+
+.layout {
+	@apply relative;
+	> aside {
+		@apply fixed top-0 bottom-0 overflow-y-auto;
+		width: $navbar-width;
+		max-width: 214px;
+	}
+
+	> div:last-child {
+		margin-left: $navbar-width;
+	}
+}
+
+.main {
+	@apply bg-dark-100 min-h-screen flex items-center;
+	border-radius: 50px 50px 0px 0px;
+}
