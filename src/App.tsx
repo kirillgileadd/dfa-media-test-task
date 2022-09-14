@@ -1,12 +1,12 @@
 import React from 'react'
-import Layout from './components/Layout/Layout'
-import Structure from './pages/structure'
+import Layout from '@/components/Layout/Layout'
+import AppRouter from '@/components/AppRouter/AppRouter'
 
 function App() {
 	return (
 		<div className="App">
 			<Layout>
-				<Structure />
+				<AppRouter />
 			</Layout>
 		</div>
 	)

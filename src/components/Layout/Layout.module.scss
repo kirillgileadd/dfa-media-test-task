@@ -1,11 +1,12 @@
-$navbar-width: 12%;
+$navbar-width: 22%;
+$header-width: 100px;
 
 .layout {
 	@apply relative;
 	> aside {
 		@apply fixed top-0 bottom-0 overflow-y-auto;
 		width: $navbar-width;
-		max-width: 214px;
+		max-width: 300px;
 	}
 
 	> div:last-child {
@@ -15,5 +16,6 @@ $navbar-width: 12%;
 
 .main {
 	@apply bg-dark-100 min-h-screen flex items-center;
-	border-radius: 50px 50px 0px 0px;
+	border-radius: 50px 50px 0 0;
+	margin-top: $header-width;
 }

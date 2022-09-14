@@ -19,19 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "incremental": true,
-    "baseUrl": "./src/",
-    "paths": {
-      "@/components/*": [
-        "components/*"
-      ],
-      "@/ui/*": [
-        "components/ui/*"
-      ],
-      "@/pages/*": [
-        "pages/*"
-      ]
-    }
+    "incremental": true
   },
   "include": [
     "react-app-env.d",
@@ -40,5 +28,6 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
+  "extends": "./tsconfig.paths.json"
 }

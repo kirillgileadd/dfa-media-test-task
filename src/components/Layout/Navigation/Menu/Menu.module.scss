@@ -1,0 +1,29 @@
+.menu {
+	@apply pt-layout pr-layout;
+
+	.menu_item {
+		@apply mb-9 pl-layout;
+		> a {
+			@apply block flex items-center text-primary relative;
+			column-gap: 28px;
+
+			> img {
+				width: 25px;
+				height: 25px;
+			}
+		}
+
+		&.active {
+			> a {
+				@apply text-white;
+				&:before {
+					@apply absolute -left-8;
+					content: '';
+					background-color: #6781f7;
+					width: 4px;
+					height: 29px;
+				}
+			}
+		}
+	}
+}

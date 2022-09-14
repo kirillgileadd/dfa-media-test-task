@@ -1,4 +1,7 @@
+@import 'src/components/Layout/Layout.module';
+
 .header {
-	@apply flex items-center;
-	min-height: 100px;
+	@apply flex items-center fixed top-0 right-0 bg-dark-200;
+	left: $navbar-width;
+	min-height: $header-width;
 }
