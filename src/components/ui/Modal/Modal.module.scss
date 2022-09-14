@@ -1,0 +1,13 @@
+.modal {
+	@apply fixed top-0 left-0 bottom-0 right-0 flex-center;
+
+	.modal_background {
+		@apply fixed top-0 left-0 bottom-0 right-0 flex-center bg-black opacity-40;
+		z-index: -1;
+	}
+
+	.modal_content {
+		@apply p-6 rounded-2xl bg-dark-100;
+		z-index: 2;
+	}
+}

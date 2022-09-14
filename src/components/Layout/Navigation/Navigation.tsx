@@ -5,9 +5,9 @@ import Menu from '@/components/Layout/Navigation/Menu/Menu'
 
 const Navigation: FC = () => {
 	return (
-		<aside className={styles.navigation}>
+		<nav className={styles.navigation}>
 			<Menu />
-		</aside>
+		</nav>
 	)
 }
 

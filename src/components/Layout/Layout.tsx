@@ -1,4 +1,4 @@
-import { FC, ReactNode } from 'react'
+import React, { FC, ReactNode } from 'react'
 import Navigation from './Navigation/Navigation'
 import Header from './Header/Header'
 
@@ -12,7 +12,7 @@ const Layout: FC<ILayout> = ({ children }) => {
 	return (
 		<div className={styles.layout}>
 			<Navigation />
-			<div>
+			<div className={styles.center}>
 				<Header />
 				<main className={styles.main}>{children}</main>
 			</div>
