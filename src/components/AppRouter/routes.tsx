@@ -11,10 +11,14 @@ export enum RouteNames {
 	STRUCTURE = '/structure',
 	DASHBORD = '/dashbord',
 	ACTIVITY_EXCHANGE = '/birzha-antivnosti',
+	SHOP = '/magazin',
+	PR = '/vzaimopiar',
 }
 
 export const routes: IRoute[] = [
-	{ path: RouteNames.STRUCTURE, component: <Structure /> },
 	{ path: RouteNames.DASHBORD, component: <NotFoundPage /> },
 	{ path: RouteNames.ACTIVITY_EXCHANGE, component: <NotFoundPage /> },
+	{ path: RouteNames.PR, component: <NotFoundPage /> },
+	{ path: RouteNames.SHOP, component: <NotFoundPage /> },
+	{ path: RouteNames.STRUCTURE, component: <Structure /> },
 ]

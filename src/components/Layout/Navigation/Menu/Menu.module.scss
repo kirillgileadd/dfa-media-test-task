@@ -25,5 +25,14 @@
 				}
 			}
 		}
+
+		&.disable {
+			> a {
+				@apply pointer-events-none;
+				> p {
+					@apply opacity-50;
+				}
+			}
+		}
 	}
 }

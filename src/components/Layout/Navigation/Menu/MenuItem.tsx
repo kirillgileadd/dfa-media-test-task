@@ -6,13 +6,14 @@ import cl from 'classnames'
 
 import styles from './Menu.module.scss'
 
-const MenuItem: FC<IMenuItem> = ({ name, link, icon }) => {
+const MenuItem: FC<IMenuItem> = ({ name, link, icon, disable }) => {
 	const router = useLocation()
 
 	return (
 		<li
 			className={cl(styles.menu_item, {
 				[styles.active]: router.pathname === link,
+				[styles.disable]: disable,
 			})}
 		>
 			<Link to={link}>
