@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react'
-import Structure from '@/pages/Structure'
+import Structure from '@/pages/Structure/Structure'
 import NotFoundPage from '@/pages/404Page'
 
 export interface IRoute {
@@ -8,7 +8,7 @@ export interface IRoute {
 }
 
 export enum RouteNames {
-	STRUCTURE = '/structure',
+	STRUCTURE = '/',
 	DASHBORD = '/dashbord',
 	ACTIVITY_EXCHANGE = '/birzha-antivnosti',
 	SHOP = '/magazin',

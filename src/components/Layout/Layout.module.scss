@@ -1,5 +1,5 @@
 $navbar-width: 22%;
-$header-width: 100px;
+$header-height: 100px;
 
 .layout {
 	@apply relative;
@@ -15,7 +15,9 @@ $header-width: 100px;
 }
 
 .main {
-	@apply bg-dark-100 min-h-screen flex items-center;
+	@apply bg-dark-100 p-2layout;
 	border-radius: 50px 50px 0 0;
-	margin-top: $header-width;
+	border: 1px solid #000000;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+	min-height: calc(100vh - $header-height);
 }

@@ -5,6 +5,10 @@ export const useModal = (
 	setVisible: any,
 	ref: RefObject<HTMLDivElement>
 ) => {
+	const onClose = useCallback(() => {
+		setVisible(false)
+	}, [setVisible])
+
 	useEffect(() => {
 		if (visible) {
 			document.addEventListener('click', (event: any) => {
@@ -14,9 +18,5 @@ export const useModal = (
 				}
 			})
 		}
-	}, [visible])
-
-	const onClose = useCallback(() => {
-		setVisible(false)
-	}, [])
+	}, [visible, ref, setVisible, onClose])
 }

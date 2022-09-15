@@ -55,7 +55,7 @@ const ModalForm: FC<IModalForm> = ({ onCloseModal }) => {
 			<Button className="mr-4" onClick={onCloseModal} type="button">
 				Закрыть
 			</Button>
-			<Button className="bg-green-600">Отправить</Button>
+			<Button className="bg-green-600 hover:bg-green-800">Отправить</Button>
 		</form>
 	)
 }
