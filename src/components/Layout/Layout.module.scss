@@ -7,10 +7,21 @@ $header-height: 100px;
 		@apply fixed top-0 bottom-0 overflow-y-auto;
 		width: $navbar-width;
 		max-width: 300px;
+		@media (max-width: 1040px) {
+			@apply static;
+			max-width: none;
+			width: 100%;
+		}
 	}
 
 	.center {
-		margin-left: $navbar-width;
+		margin-left: 300px;
+		@media (max-width: 1350px) {
+			margin-left: $navbar-width;
+		}
+		@media (max-width: 1040px) {
+			margin-left: 0;
+		}
 	}
 }
 
@@ -20,4 +31,7 @@ $header-height: 100px;
 	border: 1px solid #000000;
 	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 	min-height: calc(100vh - $header-height);
+	@media (max-width: 767px) {
+		@apply p-6;
+	}
 }

@@ -3,14 +3,28 @@ import { menuData } from '@/components/Layout/Navigation/Menu/Menu.data'
 import MenuItem from '@/components/Layout/Navigation/Menu/MenuItem'
 
 import styles from './Menu.module.scss'
+import cl from 'classnames'
 
-const Menu: FC = () => {
+interface IMenu {
+	open: boolean
+	onMenu: () => void
+}
+
+const Menu: FC<IMenu> = ({ onMenu, open }) => {
 	return (
-		<ul className={styles.menu}>
-			{menuData.map((item) => (
-				<MenuItem key={item.link} {...item} />
-			))}
-		</ul>
+		<>
+			<div
+				className={cl({ [styles.open]: open }, styles.menu_icon)}
+				onClick={onMenu}
+			>
+				<span></span>
+			</div>
+			<ul className={cl({ [styles.open]: open }, styles.menu)}>
+				{menuData.map((item) => (
+					<MenuItem onMenu={onMenu} key={item.link} {...item} />
+				))}
+			</ul>
+		</>
 	)
 }
 

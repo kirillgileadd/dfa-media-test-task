@@ -21,8 +21,8 @@ const StructureItem: FC<IStructureItem> = ({
 				</div>
 			</div>
 			<ul className={styles.partner_list}>
-				{partnerList.map((partner) => (
-					<li className={styles.partner_item}>
+				{partnerList.map((partner, index) => (
+					<li key={index} className={styles.partner_item}>
 						<img src={partner.avatar} alt="avatar" />
 						<p>{partner.name}</p>
 					</li>

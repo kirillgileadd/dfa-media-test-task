@@ -1,5 +1,5 @@
 .menu {
-	@apply pt-layout pr-layout;
+	@apply pt-layout pr-layout bg-dark-200;
 
 	.menu_item {
 		@apply mb-9 pl-layout;
@@ -33,6 +33,58 @@
 					@apply opacity-50;
 				}
 			}
+		}
+	}
+
+	@media (max-width: 1040px) {
+		@apply opacity-0 absolute w-full h-screen;
+		top: -200vh;
+		&.open {
+			@apply opacity-100 top-0 overflow-y-auto;
+		}
+	}
+}
+
+.menu_icon {
+	@apply opacity-0 z-10;
+	@media (max-width: 1040px) {
+		@apply opacity-100 absolute right-6 top-10 w-8 h-6;
+		&::before,
+		&::after,
+		span {
+			transition: all 0.3s;
+			content: '';
+			position: absolute;
+			width: 30px;
+			height: 3px;
+			left: 0;
+			background-color: #fff;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	&.open {
+		span {
+			display: none;
+		}
+
+		&::before {
+			top: 50%;
+			transform: rotate(-45deg) translate(0px, -50%);
+		}
+
+		&::after {
+			bottom: 47%;
+			transform: rotate(45deg) translate(0px, 50%);
 		}
 	}
 }

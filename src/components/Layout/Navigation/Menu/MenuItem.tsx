@@ -6,7 +6,11 @@ import cl from 'classnames'
 
 import styles from './Menu.module.scss'
 
-const MenuItem: FC<IMenuItem> = ({ name, link, icon, disable }) => {
+interface MenuItemProps extends IMenuItem {
+	onMenu: () => void
+}
+
+const MenuItem: FC<MenuItemProps> = ({ name, link, icon, disable, onMenu }) => {
 	const router = useLocation()
 
 	return (
@@ -15,6 +19,7 @@ const MenuItem: FC<IMenuItem> = ({ name, link, icon, disable }) => {
 				[styles.active]: router.pathname === link,
 				[styles.disable]: disable,
 			})}
+			onClick={onMenu}
 		>
 			<Link to={link}>
 				<img src={icon} alt="menu-icon" />

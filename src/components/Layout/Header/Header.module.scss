@@ -7,4 +7,8 @@
 	> p {
 		@apply mr-6;
 	}
+
+	@media (max-width: 1040px) {
+		@apply px-4;
+	}
 }
